@@ -70,7 +70,7 @@ unwanted space when exporting org-mode to html."
               :weight 'normal
               :slant 'normal
               :size 14.5)))
-
+(setq cnfonts-use-face-font-rescale t)
 (global-visual-line-mode t)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
