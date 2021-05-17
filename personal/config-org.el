@@ -30,8 +30,8 @@ unwanted space when exporting org-mode to html."
                           "\\1" orig-contents))
     (ad-set-arg 1 fixed-contents)
     ))
+(with-eval-after-load 'ox (require 'ox-pandoc))
 
-(require 'ox-pandoc)
 
 (setq org-hide-emphasis-markers t)
 
