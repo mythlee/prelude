@@ -85,3 +85,30 @@ unwanted space when exporting org-mode to html."
         "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 (setq prelude-whitespace nil)
+
+
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/Nutstore/work/org/todo.org" "Todo soon")
+         "* TODO %? \n  %^t")
+        ("i" "Idea" entry (file+headline "~/Nutstore/work/org/ideas.org" "Ideas")
+         "* %? \n %U")
+        ("w" "Work note" entry (file+headline "~/Nutstore/work/org/work.org" "Work")
+         "* %? \n")
+        ("p" "pcma bss note" entry (file+headline "~/Nutstore/work/org/work.org" "PCMA BSS")
+         "* %? \n")
+        ("m" "MC note" entry (file+headline "~/Nutstore/work/org/work.org" "Molecular Communication")
+         "* %? \n")
+        ("l" "Life" entry (file+headline "~/Nutstore/work/org/life.org" "General")
+         "* %? \n")
+        ("L" "LeLe" entry (file+headline "~/Nutstore/work/org/life.org" "LeLe")
+         "* %? \n")
+        ))
+      
+(define-key global-map (kbd "C-c x")  'org-capture)
+
+(setq org-agenda-files (list "~/Nutstore/work/org/todo.org"
+                             "~/Nutstore/work/org/ideas.org"
+                             "~/Nutstore/work/org/work.org"
+                             "~/Nutstore/work/org/life.org"
+                             ))
+
