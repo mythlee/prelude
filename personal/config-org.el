@@ -14,7 +14,7 @@
 
 
 (setq org-latex-create-formula-image-program 'dvipng)
-(org-babel-do-load-languages 'org-babel-load-languages '((latex . t) (python . t) (julia . t)))
+(org-babel-do-load-languages 'org-babel-load-languages '((latex . t) (python . t) (julia . t) (shell . t)))
 
 (defadvice org-html-paragraph (before fsh-org-html-paragraph-advice
                                       (paragraph contents info) activate)
